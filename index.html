@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="password.js"></script>
+
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+    <h1 class="page-title text-center">Password Generator</h1>
+
+    <form>
+
+        <label class="form-label" for="number" id="numberLabel">Password Length</label>
+        <input type="number" min="1" value="6" class="form-control" id="number">
+
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="lowCase" checked>
+                    <label class="custom-control-label" for="lowCase">Lowercase Letters</label>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="upCase">
+                    <label class="custom-control-label" for="upCase">Uppercase Letters</label>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="symbCase" checked>
+                    <label class="custom-control-label" for="symbCase">Symbols</label>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="numCase" checked>
+                    <label class="custom-control-label" for="numCase">Numbers</label>
+                </div>
+            </li>
+        </ul>
+    </form>
+
+    <button class="btn btn-primary" onclick="generatePassword()">Generate</button>
+
+    
+
+    <div id="output-group" class="input-group">
+        <input readonly type="text" class="form-control form-control-plaintext" id="output">
+        <span class="input-group-btn">
+          <button class="btn btn-default" onclick="copy()" type="button" id="copy-button" data-toggle="tooltip" data-placement="button" title="Copy to Clipboard">
+            Copy
+          </button>
+        </span>
+    </div>      
+
+</body>
+
+
+<script>
+    $('#copy-button').tooltip();
+</script>
+
+</html>

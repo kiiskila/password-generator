@@ -1,0 +1,22 @@
+.btn, #output, #numberLabel, #number{
+    margin-left: 1em;
+}
+
+.btn, #output, #number{
+    margin-bottom: 2em;
+}
+
+#output-group {
+    width: 25%;
+}
+
+#number {
+    width: 10%;
+}
+
+input[type="text"], textarea {
+    width: 95.2% !important;
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
